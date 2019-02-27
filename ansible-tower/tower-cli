@@ -1,0 +1,12 @@
+https://github.com/ansible/tower-cli/issues/452
+
+
+Create vault password
+
+tower-cli credential create --name=moe-cred -d "testing tower-cli cred" --credential-type=${ID NUMBER found on /api page} --organization Default --inputs='vault_password: "password"' --fail-on-found
+
+
+
+Create Machine Password
+
+tower-cli credential create --name=moe-machine -d "testing tower-cli cred for machine pem" --credential-type=${ID NUMBER found on /api page} --organization Default --inputs="{username: 'centos', ssh_key_data: '$val'}" --fail-on-found
